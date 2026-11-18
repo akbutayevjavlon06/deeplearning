@@ -1,5 +1,13 @@
 import platform
 import pathlib
+import sys
+import types
+import streamlit as st
+import torch
+import torchvision.transforms as T
+from PIL import Image
+from fastai.vision.all import *
+import plotly.express as px
 
 if platform.system() == 'Linux':
     pathlib.WindowsPath = pathlib.PosixPath
@@ -12,15 +20,6 @@ import torchvision.transforms as T
 from PIL import Image
 from fastai.vision.all import *
 import plotly.express as px
-
-# 1. Colab (Python 3.13) va mahalliy Python 3.11 o'rtasidagi pathlib mosligi
-if 'pathlib._local' not in sys.modules:
-    mock_local = types.ModuleType('pathlib._local')
-    mock_local.Path = pathlib.Path
-    mock_local.PosixPath = pathlib.WindowsPath
-    mock_local.WindowsPath = pathlib.WindowsPath
-    sys.modules['pathlib._local'] = mock_local
-
 pathlib.PosixPath = pathlib.WindowsPath
 
 st.title('Ichimliklarni klasslovchi dastur')
