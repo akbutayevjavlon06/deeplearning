@@ -11,17 +11,6 @@ import plotly.express as px
 
 if platform.system() == 'Linux':
     pathlib.WindowsPath = pathlib.PosixPath
-import sys
-import types
-import pathlib
-import streamlit as st
-import torch
-import torchvision.transforms as T
-from PIL import Image
-from fastai.vision.all import *
-import plotly.express as px
-pathlib.PosixPath = pathlib.WindowsPath
-
 st.title('Ichimliklarni klasslovchi dastur')
 
 # 2. Modelni xotiraga yuklash
