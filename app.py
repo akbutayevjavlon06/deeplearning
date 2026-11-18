@@ -63,7 +63,7 @@ if file:
     st.image(file)
     img = PILImage.create(file)
     
-    # Bashorat olish
+    # Bashorat
     pred, pred_id, probs = predict_safely(img, model)
     
     st.success(f'Bashorat: {pred}')
