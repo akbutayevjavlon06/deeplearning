@@ -1,3 +1,8 @@
+import platform
+import pathlib
+
+if platform.system() == 'Linux':
+    pathlib.WindowsPath = pathlib.PosixPath
 import sys
 import types
 import pathlib
