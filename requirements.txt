@@ -1,0 +1,6 @@
+streamlit
+fastai
+plotly
+torch
+torchvision
+pillow
